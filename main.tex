@@ -1,163 +1,208 @@
-\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+\documentclass[11pt,a4paper]{awesome-cv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 
-% moderncv themes
-%\moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
-\moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
-\moderncvcolor{blue}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
-%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
-\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+\fontdir[fonts/]
+
+\colorlet{awesome}{awesome-red}
+
+\definecolor{text}{HTML}{000000}
+\definecolor{darktext}{HTML}{000000}
+\definecolor{graytext}{HTML}{000000}
+\definecolor{lighttext}{HTML}{000000}
+
+\setbool{acvSectionColorHighlight}{true}
 
 % character encoding
-\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
 
 % adjust the page margins
-\usepackage[top=1.5cm, bottom=1.5cm, left=1cm, right=2cm, scale=0.8]{geometry}
-\setlength{\hintscolumnwidth}{3.9cm}
+%\usepackage[top=1.5cm, bottom=1.5cm, left=1cm, right=2cm, scale=0.8]{geometry}
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
 
 % personal data
+\photo[rectangle,edge,left]{profile.jpeg}
 \name{Jacobus Lock,}{PhD}
-%\title{Scientist, engineer and general tinkerer}
-\title{Recent PhD graduate and researcher seeking a transition from academia to professional R\&D opportunities in robotics engineering}
-\address{}{Lincoln, UK}{}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
-\phone[mobile]{+44 (0)7449 739341}                   % optional, remove / comment the line if not wanted
+\position{Computer Scientist{\enskip\cdotp\enskip}Mechatronic Engineer}
+%\position{Recent PhD graduate and researcher seeking a transition from academia to professional R\&D opportunities in robotics engineering}
+\address{Lincoln, UK}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\mobile{+44 (0)7449 739341}                   % optional, remove / comment the line if not wanted
 \email{jaycee.lock@gmail.com}                               % optional, remove / comment the line if not wanted
 \homepage{jclock.co.uk}                         % optional, remove / comment the line if not wanted
-\social[linkedin][linkedin.com/in/jacobus-lock/]{jacobus-lock}
-\social[github][github.com/jayceelock]{jayceelock}                         % optional, remove / comment the line if not wanted
-%\social[twitter][twitter.com/JayceeLock]{jayceelock}
-%\social[googlescholar][scholar.google.com/citations?user=MLYdvnwAAAAJ]{Jacobus C. Lock}
+\linkedin{jacobus-lock}
+\github{jayceelock}                         % optional, remove / comment the line if not wanted
+\googlescholar{MLYdvnwAAAAJ}{JC Lock}
 
 \begin{document}
-\makecvtitle
+\makecvheader
 
-\section{Education}
+\makecvfooter{\today}{Jacobus C. Lock~~~·~~~Cirriculum Vitae}{\thepage}
 
-\cventry{2016 -- 2020}{PhD, Computer Science}{University of Lincoln}{Lincoln, UK}{}{}
-\cventry{2014 -- 2015}{M.Eng by research, Mechatronic Engineering}{Stellenbosch University}{Stellenbosch, South Africa}{}{}
-\cventry{2010 -- 2013}{B.Eng, Mechatronic Engineering}{Stellenbosch University}{Stellenbosch, South Africa}{}{}  % Arguments not required can be left empty
+\cvsection{Education}
 
-\section{Recent Experience}
+\begin{cventries}
+  \cventry
+  {PhD, Computer Science}
+  {University of Lincoln}
+  {Lincoln, UK}
+  {April 2016 -- March 2020}
+  {
+    \begin{cvitems}
+      \item Google-funded project which investigated the efficacy of active vision techniques when applied to human tasks to provide assistance to visually impaired users
+      \item Integrated an object detector and POMDP policy framework onto a mobile app to collect and analyse data from human participants
+      \item Achieved an 8-fold time performance improvement over remotely-driven alternatives
+      %\item Attended and presented at several conferences 
+      \item Published several academic papers with international collaborators and presented my work at various conferences
+      \item App code and thesis document available at \url{https://bit.ly/38TJHPv} and \url{https://bit.ly/3vCo3ZX} respectively
+      \item Assisted lecturers during tutorial sessions for various undergraduate subjects throughout my PhD research
+    \end{cvitems}
+  }
+  \cventry
+  {M.Eng by research, Mechatronic Engineering}
+  {Stellenbosch University}
+  {Stellenbosch, South Africa}
+  {Jan. 2014 -- Dec. 2015}
+  {
+    \begin{cvitems}
+      \item Devised a computer vision-based method to easily measure a drone's pose estimation error in flight so that they can more effectively calibrate mirrors in a solar thermal power plant
+      \item Methodologies included using a camera and OpenCV determine a drone's pose and train a neural network model to give error bounds
+      \item Took several optional modules: Advanced control systems, Advanced dynamics, Advanced numerical methods, Computer vision, Machine learning
+      \item Assisted lecturers during tutorial sessions for various undergraduate subjects throughout my masters studies
+      \item Lead the research  group's social committee, successfully arranging 2 end of year and various smaller events for approx. 35 people
+    \end{cvitems}
+  }
+  \cventry
+  {B.Eng, Mechatronic Engineering}
+  {Stellenbosch University}
+  {Stellenbosch, South Africa}
+  {Jan. 2010 -- Dec. 2013}
+  {
+    \begin{cvitems}
+      \item Volunteered as a student mentor for 2 years to help new students acclimatise to campus life
+      \item Nominated for best dissertation presentation in my final year
+    \end{cvitems}
+  }  
+\end{cventries}
 
-\cventry{April 2020 -- Present}{Post-Doctorate Research Fellow}{University of Lincoln}{Lincoln, UK}{Laserboom}{
-  \begin{itemize}
-    \item Implemented a ROS-based sensor fusion and vehicle localisation system for a sprayer vehicle
-    \item Built surface modelling software to estimate crop and terrain shape 40m in front of a vehicle using LiDAR data 
-    \item Designed a controller that uses localisation and surface data to keep sprayer booms 30cm from the surface to avoid hitting crops
-    \item Integrated my controller with external industrial actuation hardware 
-    \item Built a temporal dataset of developing crops to investigate feasibility of LiDAR-based crop monitoring software
-    \item Designed an experiment to verify efficacy of our control system using the gathered dataset 
-  \end{itemize}
-}
+\cvsection{Work Experience}
 
-\cventry{Jan. 2020 -- April 2020}{Robotics Engineer}{SAGA Robotics Ltd.}{Lincoln, UK}{Raspberry Project}{
-  \begin{itemize}
-    \item Translated a colleague's path planning software to a ROS MoveIt-friendly controller plugin
-    \item Implemented a simulation environment to test the controller on the `Thorvald' robot platform
-    \item Achieved my stated objectives 2 months ahead of schedule
-  \end{itemize}
-}
+\begin{cventries}
+  \cventry
+  {Post-Doctorate Research Fellow}
+  {University of Lincoln}
+  {Lincoln, UK}
+  {April 2020 -- Present}
+  {
+    \begin{cvitems}
+      \item Implemented a ROS-based sensor fusion and vehicle localisation system for a sprayer vehicle
+      \item Built surface modelling software to estimate the shape of crops and the terrain 40m in front of a vehicle to within 5cm using LiDAR data 
+      \item Designed a controller that uses localisation and surface data to keep sprayer booms 30cm from the surface to avoid hitting crops
+      \item Built a temporal dataset of developing crops to investigate the feasibility of LiDAR-based crop monitoring software
+      \item Project deliverables described as `exemplary' by funding body
+    \end{cvitems}
+  }
+  \cventry
+  {Robotics Engineer}
+  {SAGA Robotics Ltd.}
+  {Lincoln, UK}
+  {Jan. 2020 -- April 2020}
+  {
+    \begin{cvitems}
+      \item Coordinated with a colleague to translate their robot arm path planning software into a ROS-compatible simulation plugin 
+      \item Built a Gazebo simulation environment to test the arm on different platforms via MoveIt
+      \item Achieved my stated objectives 2 months ahead of schedule
+    \end{cvitems}
+  }
+  \cventry
+  {Research Assistant}
+  {University of Lincoln}
+  {Lincoln, UK}
+  {April 2019 -- Jan. 2020}
+  {
+    \begin{cvitems}
+      \item Designed and built a robust solution to mount 2 Panda 7-DoF arms onto a `Thorvald' robot platform
+      \item Collaborated with project team and built a ROS-friendly robot model of the complete robot system 
+      \item Integrated MoveIt path planning into simulation environment
+    \end{cvitems}
+  }
+\end{cventries}
 
-\cventry{April 2019 -- Jan. 2020}{Research Assistant}{University of Lincoln}{Lincoln, UK}{NCNR}{
-  \begin{itemize}
-    \item Designed and built a robust mounting solution for 2 Panda 7-DoF arms onto a `Thorvald' robot platform
-    \item Created a ROS-friendly robot model of the complete robot system and integrated MoveIt path planning
-    \item Verified functionality during trials
-  \end{itemize}
-}
+\cvsection{Skills}
 
-\cventry{April 2016 -- March 2020}{Doctoral Researcher}{University of Lincoln}{Lincoln, UK}{\emph{Active Vision-Based Guidance with a Mobile Device for People with Visual Impairments}}{
-  \begin{itemize}
-    \item Research focussed on investigating efficacy of applying active vision techniques to human tasks to provide assistance
-    \item Methodologies included integrating an object detector and POMDP policy framework onto a mobile app and collecting and analysing data from human participants
-    \item Attended and presented at several conferences 
-    \item Published several conference and journal papers with international collaborators
-    \item App code and thesis document available at \url{https://bit.ly/38TJHPv} and \url{https://bit.ly/3vCo3ZX} respectively
-    \item Assisted lecturers during tutorial sessions for various undergraduate subjects throughout my PhD research
-  \end{itemize}
-}
+\begin{cvskills}
+  \cvskill
+  {Programming}%
+  {C\textbackslash C\texttt{++}, Rust, Java, Python, Kotlin, Latex, Git, Agile development}%
+  \cvskill
+  {Data Analysis}%
+  {Matlab, NumPy, Pandas}%
+  \cvskill
+  {Embedded systems}
+  {Arduino, Android, ROS}
+  \cvskill
+  {Language}
+  {Afrikaans, English, German (learning), Dutch (learning)}
+  \cvskill
+  {Web hosting}
+  {Bare metal VPS, Django, REST API, Docker}
+\end{cvskills}
 
-\cventry{Jan. 2014 -- Dec. 2015}{Master's Researcher}{Stellenbosch University}{Stellenbosch, South Africa}{\emph{ Pose Error Estimation of a Quadcopter in the Outdoors}}{
-  \begin{itemize}
-    \item Research looked into a way to easily measure a UAV drone's pose estimation error in flight so that they can be used to calibrate mirrors in a solar thermal power plant
-    \item Methodologies included using a camera and OpenCV determine a drone's pose and train a neural network model to give upper and lower error bounds
-    \item Modules taken: Advanced control systems, Advanced dynamics, Advanced numerical methods, Computer vision, Machine learning
-    \item Assisted lecturers during tutorial sessions for various undergraduate subjects throughout my masters studies
-  \end{itemize}
-}
- 
-\section{Personal Projects}
 
-\cvitem{Home Server}{
-  \begin{itemize}
-    \item Built Django-based site to host my personal web page and back up my personal data
-    \item Working on migrating the server to a home-based machine
-  \end{itemize}
-}
-\cvitem{Biltong Dryer}{
-  \begin{itemize}
-    \item Designing an Arduino-controlled meat drying box to make biltong
-  \end{itemize}
-%Making a dryer I can use to make biltong (delicious South African snack). An Arduino controls a fan and heat element to regulate the box's climate so that you can better control the biltong's dryness and taste.
-}
-\cvitem{Train Town}{
-  \begin{itemize}
-    \item Built a Raspberry Pi-controlled model train town for a freelance project
-    \item Made a web interface to control all parts of the town globally (lights, motors, etc.) 
-  \end{itemize}
-}
-\cvitem{Echo Locator}{
-  \begin{itemize}
-    \item Made an Android app that geo-references locations where sounds of a specific frequency are detected
-    \item Implemented a Fast Fourier Transform in the app to filter out unwanted frequencies
-  \end{itemize}
-}
-%\cvitem{NFCPay}{Designed and implemented a cashless vending machine that allows purchases to be made using QR codes, NFC or student ID authentication, and deployed a server to track and encrypt all transactions. }
-%\cvitem{PiLock}{Created a centralised lock control system where a user can control the status of a group of locks with a Android phone and uses a back-end server for authentication and user logging. }
+\cvsection{Extracurricular Activity}
 
-\section{Skills}
+\begin{cventries}
 
-\cvitem{Strong}{Android, Java, C\textbackslash C++, Python, Git, Matlab, Latex, Linux, experiment design and data analysis} 
-\cvitem{Knowledgeable}{Django, Kotlin, Bash, embedded systems, Rust, web hosting, Docker} 
+  \cventry
+  {Personal}
+  {Personal Tinkering Projects}
+  {Lincoln, UK}
+  {2020 -- Present}
+  {
+    \begin{cvitems}
+      \item Built Django-based site to host my personal web page and back up my personal data, currently migrating the server to a home-based machine
+      \item Designing an Arduino-controlled meat drying box to make biltong
+    \end{cvitems}
+  }
+  \cventry
+  {Upwork.com}
+  {Freelance Software Engineer}
+  {Lincoln, UK}
+  {2017 -- 2019}
+  {
+    \begin{cvitems}
+      \item Made an Android app that geo-references locations where sounds of a specific frequency are detected using an FFT
+      \item Built a Raspberry Pi-controlled model train town than can be controlled globally from a web interface I built
+      \item Designed and implemented a vending machine that allows cashless purchases to be made using QR codes, NFC or student ID authentication 
+      \item Made an app-controlled lock management system where a user can set the status of a group of locks from their mobile
+    \end{cvitems}
+  }
+  \cventry
+  {Academic Journals}
+  {Academic Paper Reviewer}
+  {Lincoln, UK}
+  {2020 -- Present}
+  {
+    \begin{cvitems}
+    \item Reviewed multiple paper submissions to technology-focussed journals
+    \end{cvitems}
+  }
+\end{cventries}
 
-\section{Languages}
+\cvsection{Hobbies and Interests}
 
-\cvitemwithcomment{Afrikaans}{Native}{}
-\cvitemwithcomment{English}{Native}{Raised in bilingual household}
-\cvitemwithcomment{Dutch}{Basic}{Can understand when spoken slowly}
-\cvitemwithcomment{German}{Basic}{Learning}
+\begin{cventries}
 
-\section{Hobbies and Interests}
+  \cventry
+  {
+  }
+  {}
+  {}
+  {}
+  {
+    \begin{cvitems}
+      \item Learning about, travelling to and exploring historic areas
+      \item Studying basic economics, particularly those of developing regions
+      \item Outdoor exercise and running (completed 3 half-marathons)
+    \end{cvitems}
+  }
+\end{cventries}
 
-\cvitem{}{Learning about, travelling to and exploring historic areas}
-\cvitem{}{Economics, particularly those of developing regions}
-\cvitem{}{Boxing}
-
-%\section{References}
-
-%\begin{cvcolumns}
-  %\cvcolumn{Dr. Charles Fox}
-  %{
-    %\begin{itemize}
-      %\item Post-doctorate supervisor
-      %\item \url{chfox@lincoln.ac.uk}
-    %\end{itemize}
-  %}
-  %\cvcolumn{Halvard Grimstad}
-  %{
-    %\begin{itemize}
-      %\item SAGA Robotics Manager
-      %\item \url{hgrimstad@sagarobotics.com}
-    %\end{itemize}
-  %}
-  %\cvcolumn{Dr. Grzegorz Cielniak}
-  %{
-    %\begin{itemize}
-      %\item PhD and RA supervisor
-      %\item \url{gcielniak@lincoln.ac.uk}
-    %\end{itemize}
-  %}
-%\end{cvcolumns}
-
-%\cvitem{}{More available upon request}
-
-\end{document}end 
+\end{document}
