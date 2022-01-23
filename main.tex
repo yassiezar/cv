@@ -19,11 +19,11 @@
 \geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
 
 % personal data
-\photo[rectangle,edge,left]{profile.jpeg}
+\photo[circle,edge,left]{pp.png}
 \name{Jacobus Lock,}{PhD}
-\position{Computer Scientist{\enskip\cdotp\enskip}Mechatronic Engineer}
+\position{Robotics Engineer {\enskip\cdotp\enskip} Team Leader}
 %\position{Recent PhD graduate and researcher seeking a transition from academia to professional R\&D opportunities in robotics engineering}
-\address{Lincoln, UK}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\address{Farnham, UK}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
 \mobile{+44 (0)7449 739341}                   % optional, remove / comment the line if not wanted
 \email{jaycee.lock@gmail.com}                               % optional, remove / comment the line if not wanted
 \homepage{jclock.co.uk}                         % optional, remove / comment the line if not wanted
@@ -35,6 +35,61 @@
 \makecvheader
 
 \makecvfooter{\today}{Jacobus C. Lock~~~·~~~Cirriculum Vitae}{\thepage}
+
+\cvsection{Work Experience}
+
+\begin{cventries}
+  \cventry
+  {Robotics Software Development Team Leader}
+  {Fox Robotics}
+  {Farnham, UK}
+  {June 2021 -- Present}
+  {
+    \begin{cvitems}
+      \item Implemented new development and version control workflow to more clearly delineate and isolate developer contributions
+      \item Led the team through a code redesign and rebuilding phase to improve the existing codebase using test-based development and design. New codebase is far more robust, performant, and clearly-documented and tested.
+      \item Successfully delivered a crucial live, spectator-controlled demonstration for prospective clients on time
+    \end{cvitems}
+  }
+  \cventry
+  {Post-Doctorate Research Fellow}
+  {University of Lincoln}
+  {Lincoln, UK}
+  {April 2020 -- June 2021}
+  {
+    \begin{cvitems}
+      \item Implemented a ROS-based sensor fusion and vehicle localisation system for a sprayer vehicle
+      \item Designed and built surface modelling software to estimate the shape of crops and the terrain 40m in front of a vehicle to within 5cm using LiDAR data 
+      \item Designed a controller that uses localisation and surface data to keep sprayer booms 30cm from the surface to avoid hitting crops
+      %\item Built a temporal dataset of developing crops to investigate the feasibility of LiDAR-based crop monitoring software
+      %\item Project deliverables described as `exemplary' by funding body
+    \end{cvitems}
+  }
+  \cventry
+  {Robotics Engineer (contract)}
+  {SAGA Robotics Ltd.}
+  {Lincoln, UK}
+  {Jan. 2020 -- April 2020}
+  {
+    \begin{cvitems}
+      \item Coordinated with a colleague to translate their robot arm path planning software into a ROS-compatible simulation plugin 
+      \item Built a Gazebo simulation environment to test the arm on different platforms via MoveIt
+      \item Achieved stated objectives 2 months ahead of schedule
+    \end{cvitems}
+  }
+  \cventry
+  {Research Assistant}
+  {University of Lincoln}
+  {Lincoln, UK}
+  {April 2019 -- Jan. 2020}
+  {
+    \begin{cvitems}
+      \item Designed and built a robust solution to mount 2 Panda 7-DoF arms onto a `Thorvald' robot platform
+      \item Collaborated with project team and built a ROS-friendly robot model of the complete robot system 
+      \item Integrated MoveIt path planning into simulation environment
+    \end{cvitems}
+  }
+\end{cventries}
 
 \cvsection{Education}
 
@@ -82,49 +137,7 @@
   }  
 \end{cventries}
 
-\cvsection{Work Experience}
-
-\begin{cventries}
-  \cventry
-  {Post-Doctorate Research Fellow}
-  {University of Lincoln}
-  {Lincoln, UK}
-  {April 2020 -- Present}
-  {
-    \begin{cvitems}
-      \item Implemented a ROS-based sensor fusion and vehicle localisation system for a sprayer vehicle
-      \item Built surface modelling software to estimate the shape of crops and the terrain 40m in front of a vehicle to within 5cm using LiDAR data 
-      \item Designed a controller that uses localisation and surface data to keep sprayer booms 30cm from the surface to avoid hitting crops
-      \item Built a temporal dataset of developing crops to investigate the feasibility of LiDAR-based crop monitoring software
-      \item Project deliverables described as `exemplary' by funding body
-    \end{cvitems}
-  }
-  \cventry
-  {Robotics Engineer}
-  {SAGA Robotics Ltd.}
-  {Lincoln, UK}
-  {Jan. 2020 -- April 2020}
-  {
-    \begin{cvitems}
-      \item Coordinated with a colleague to translate their robot arm path planning software into a ROS-compatible simulation plugin 
-      \item Built a Gazebo simulation environment to test the arm on different platforms via MoveIt
-      \item Achieved my stated objectives 2 months ahead of schedule
-    \end{cvitems}
-  }
-  \cventry
-  {Research Assistant}
-  {University of Lincoln}
-  {Lincoln, UK}
-  {April 2019 -- Jan. 2020}
-  {
-    \begin{cvitems}
-      \item Designed and built a robust solution to mount 2 Panda 7-DoF arms onto a `Thorvald' robot platform
-      \item Collaborated with project team and built a ROS-friendly robot model of the complete robot system 
-      \item Integrated MoveIt path planning into simulation environment
-    \end{cvitems}
-  }
-\end{cventries}
-
+\newpage
 \cvsection{Skills}
 
 \begin{cvskills}
@@ -136,7 +149,7 @@
   {Matlab, NumPy, Pandas}%
   \cvskill
   {Embedded systems}
-  {Arduino, Android, ROS}
+  {Arduino, Android, ROS, Electronics}
   \cvskill
   {Language}
   {Afrikaans, English, German (learning), Dutch (learning)}
@@ -201,6 +214,7 @@
       \item Learning about, travelling to and exploring historic areas
       \item Studying basic economics, particularly those of developing regions
       \item Outdoor exercise and running (completed 3 half-marathons)
+      \item Boxing, touch rugby
     \end{cvitems}
   }
 \end{cventries}
