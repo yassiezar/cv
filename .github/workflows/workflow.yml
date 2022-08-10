@@ -3,7 +3,7 @@ name: "build-release-cv"
 # run on pull requests to develop and master
 on:
   push:
-    branches: ["add-action"]
+    branches: ["master"]
 
 jobs:
   tagged-release:
