@@ -21,8 +21,8 @@ jobs:
       - name: Build CV
         run: |
           apt-get update
-          apt-ge#apt-get upgrade -y
-          #apt-ge#apt-get install -y python-bloom fakeroot dpkg-dev debhelper
+          apt-get upgrade -y
+          #apt-get install -y python-bloom fakeroot dpkg-dev debhelper
           xelatex main.tex
       # Make release and upload file
       - name: Make PDF release
