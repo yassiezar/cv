@@ -23,7 +23,7 @@ jobs:
           apt-get update
           apt-get upgrade -y
           #apt-get install -y python-bloom fakeroot dpkg-dev debhelper
-          xelatex main.tex
+          xelatex jc_lock_cv.tex
       # Make release and upload file
       - name: Make PDF release
         uses: "marvinpinto/action-automatic-releases@latest"
