@@ -1,0 +1,35 @@
+name: "build-release-cv"
+
+# run on pull requests to develop and master
+on:
+  push:
+    branches: ["add-action"]
+
+jobs:
+  tagged-release:
+    name: "Tagged Release"
+    runs-on: ubuntu-latest
+    container: "leplusorg/latex"
+    steps:
+      - uses: actions/checkout@v2.4.2
+        with:
+          # check out the feature branch's HEAD
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          ref: ${{ github.event.push.head.ref }}
+          fetch-depth: 0
+      # format the latest commit
+      - name: Build CV
+        run: |
+          apt-get update
+          apt-get upgrade -y
+          #apt-get install -y python-bloom fakeroot dpkg-dev debhelper
+          xelatex main.tex
+      # Make release and upload file
+      - name: Make PDF release
+        uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "latest"
+          prerelease: false
+          files: |
+            main.pdf
