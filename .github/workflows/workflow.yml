@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     container: "leplusorg/latex"
     steps:
-      - uses: actions/checkout@v2.4.2
+      - uses: actions/checkout@v4
         with:
           # check out the feature branch's HEAD
           repository: ${{ github.event.pull_request.head.repo.full_name }}
@@ -22,7 +22,7 @@ jobs:
         run: |
           apt-get update
           apt-get upgrade -y
-          #apt-get install -y python-bloom fakeroot dpkg-dev debhelper
+          apt-get install -y texlive-xetex texlive-fonts-recommended texlive-fonts-extra
           xelatex jc_lock_cv.tex
       # Make release and upload file
       - name: Make PDF release
